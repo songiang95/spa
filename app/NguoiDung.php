@@ -8,23 +8,23 @@ class NguoiDung extends Model
 {
     protected $table = "nguoidung";
     
-    public function nguoidung_loai()
+    public function loai_nguoi_dung()
     {
-        return $this->belongsTo('App\LoaiNguoiDung','loainguoidung_id','id_loainguoidung');
+        return $this->belongsTo('App\LoaiNguoiDung','loainguoidung_id','id');
     }
     
-      public function nguoidung_nhanxet()
+      public function nhanxet()
     {
-        return $this->hasMany('App\NhanXet','nguoidung_id','id_nguoidung');
+        return $this->hasMany('App\NhanXet','nguoidung_id','id');
     }
     
-      public function nguoidung_datlich()
+      public function datlich()
     {
-        return $this->hasMany('App\DatLich','nguoidung_id','id_nguoidung');
+        return $this->hasMany('App\DatLich','nguoidung_id','id');
     }
     
-      public function nguoidung_khuyenmaidx()
+      public function khuyenmaidx()
     {
-        return $this->hasMany('App\KhuyenMaiDaXem','nguoidung_id','id_nguoidung');
+        return $this->hasMany('App\KhuyenMaiDaXem','nguoidung_id','id');
     }
 }

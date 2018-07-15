@@ -10,7 +10,7 @@ class LoaiNguoiDung extends Model
     
       public function nguoidung()
     {
-        return $this->hasMany('App\NguoiDung','loainguoidung_id','id_loainguoidung');
+        return $this->hasMany('App\NguoiDung','loainguoidung_id','id');
     }
     
 }

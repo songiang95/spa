@@ -10,6 +10,6 @@ class KhuyenMai_HinhAnh extends Model
     
     public function url_khuyenmai()
     {
-        return $this->belongsTo('App\KhuyenMai','khuyenmai_id','id_khuyenmai');
+        return $this->belongsTo('App\KhuyenMai','khuyenmai_id','id');
     }
 }

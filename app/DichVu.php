@@ -9,9 +9,9 @@ class DichVu extends Model
     protected $table = "dichvu";
     public $timestamps = false;
     
-      public function dichvu_khuyenmai()
+      public function khuyenmai()
     {
-        return $this->belongsTo('App\KhuyenMai','dichvu_id','id_dichvu');
+        return $this->hasMany('App\KhuyenMai','dichvu_id','id');
     }
     
     public static function join_khuyenmai()

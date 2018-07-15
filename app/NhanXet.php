@@ -8,14 +8,14 @@ class NhanXet extends Model
 {
     protected $table = "nhanxet";
     
-    public function nhanxet_khuyenmai()
+    public function khuyenmai()
     {
-        return $this->hasMany('App\KhuyenMai','khuyenmai_id','id_khuyenmai');
+        return $this->belongsTo('App\KhuyenMai','khuyenmai_id','id');
     }
     
-    public function nhanxet_nguoidung()
+    public function nguoidung()
     {
-        return $this->hasMany('App\NguoiDung','nguoidung_id','id_nguoidung');
+        return $this->belongsTo('App\NguoiDung','nguoidung_id','id');
     }
     
     public static function join_khuyenmai_km_url()

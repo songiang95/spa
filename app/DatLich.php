@@ -8,13 +8,13 @@ class DatLich extends Model
 {
     protected $table = "datlich";
     
-    public function datlich_khuyenmai()
+    public function khuyenmai()
     {
-        return $this->belongsTo('App\KhuyenMai','khuyenmai_id','id_khuyenmai');
+        return $this->belongsTo('App\KhuyenMai','khuyenmai_id','id');
     }
     
-    public function datlich_nguoidung()
+    public function nguoidung()
     {
-        return $this->belongsTo('App\NguoiDung','nguoidung_id','id_nguoidung');
+        return $this->belongsTo('App\NguoiDung','nguoidung_id','id');
     }
 }

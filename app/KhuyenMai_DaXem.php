@@ -10,12 +10,12 @@ class KhuyenMai_DaXem extends Model
     
     public function khuyenmaidx_khuyenmai()
     {
-        return $this->hasMany('App\KhuyenMai','khuyenmai_id','id_khuyenmai');
+        return $this->hasMany('App\KhuyenMai','khuyenmai_id','id');
     }
     
     public function khuyenmaidx_nguoidung()
     {
-        return $this->hasMany('App\NguoiDung','nguoidung_id','id_nguoidung');
+        return $this->hasMany('App\NguoiDung','nguoidung_id','id');
     }
     
     public static function join_khuyenmai()

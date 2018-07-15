@@ -10,6 +10,6 @@ class HoiDap extends Model
     
     public function hoidap_khuyenmai()
     {
-        return $this->belongsTo('App\KhuyenMai','khuyenmai_id','id_khuyenmai');
+        return $this->belongsTo('App\KhuyenMai','khuyenmai_id','id');
     }
 }

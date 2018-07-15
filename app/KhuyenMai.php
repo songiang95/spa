@@ -8,34 +8,35 @@ class KhuyenMai extends Model
 {
     protected $table = "khuyenmai";
     
-    public function khuyenmai_cuahang()
+
+    public function cuahang()
     {
-        return $this->belongsTo('App\CuaHang','cuahang_id','id_cuahang');
+        return $this->belongsTo('App\CuaHang','cuahang_id','id');
     }
     
-    public function khuyenmai_dichvu()
+    public function dichvu()
     {
-        return $this->belongsTo('App\DichVu','dichvu_id','id_dichvu');
+        return $this->belongsTo('App\DichVu','dichvu_id','id');
     }
     
       public function khuyenmai_url()
     {
-        return $this->hasOne('App\KhuyenMai_HinhAnh','khuyenmai_id','id_khuyenmai');
+        return $this->hasOne('App\KhuyenMai_HinhAnh','khuyenmai_id','id');
     }
     
-      public function khuyenmai_hoidap()
+      public function hoidap()
     {
-        return $this->hasMany('App\HoiDap','khuyenmai_id','id_khuyenmai');
+        return $this->hasMany('App\HoiDap','khuyenmai_id','id');
     }
     
-      public function khuyenmai_nhanxet()
+      public function nhanxet()
     {
-        return $this->hasMany('App\NhanXet','khuyenmai_id','id_khuyenmai');
+        return $this->hasMany('App\NhanXet','khuyenmai_id','id');
     }
     
       public function khuyenmai_daxem()
     {
-        return $this->hasOne('App\KhuyenMai_Daxem','khuyenmai_id','id_khuyenmai');
+        return $this->hasOne('App\KhuyenMai_Daxem','khuyenmai_id','id');
     }
     public static function join_km_url()
         {

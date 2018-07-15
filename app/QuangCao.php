@@ -8,9 +8,9 @@ class QuangCao extends Model
 {
     protected $table = "quangcao";
     
-    public function quangcao_cuahang()
+    public function cuahang()
     {
-        return $this->belongsTo('App\CuaHang','id_cuahang','id_cuahang');
+        return $this->belongsTo('App\CuaHang','cuahang_id','id');
     }
     public static function join_cuahang_km_url()
         {

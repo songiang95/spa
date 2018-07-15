@@ -8,13 +8,13 @@ class CuaHang extends Model
 {
     protected $table = "cuahang";
     
-    public function cuahang_quangcao()
+    public function quangcao()
     {
-        return $this->hasMany('App\QuangCao','cuahang_id','id_cuahang');
+        return $this->hasMany('App\QuangCao','cuahang_id','id');
     }
-      public function cuahangkhuyenmai()
+      public function khuyenmai()
     {
-        return $this->hasMany('App\KhuyenMai','cuahang_id','id_cuahang');
+        return $this->hasMany('App\KhuyenMai','cuahang_id','id');
     }
     public static function join_khuyenmai()
         {
